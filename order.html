@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/main.css">
+<a href="#" class="logo"><img src="images/logo.png" alt="Legend Park Logo"></a>
+	<title>Your Booking Details</title>
+
+</head>
+
+<body>
+<h1>Your Order Has Been Confrimed</h1>
+<p>We Hope To See You Soon, <span id="custname"></span>.</p>
+<br/>
+<p>You ordered <span id="thnkquantity"></span> tickets for a total cost of <span id="thnkcost"></span>. We will see you on the <span id="thnkvisitdate"></span>.</p>
+<script>
+	document.getElementById("custname").innerHTML = localStorage.getItem("custname");
+	document.getElementById("thnkvisitdate").innerHTML = localStorage.getItem("visitdate");
+	document.getElementById("thnkquantity").innerHTML = localStorage.getItem("quantity");
+	document.getElementById("thnkcost").innerHTML = localStorage.getItem("cost");
+</script>
+</body>
+</html>

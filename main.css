@@ -1,0 +1,264 @@
+@charset "utf-8";
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    top:230px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    background-color:#FF8C42;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#000000;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
+}
+
+
+*{ 
+   box-sizing: border-box; /* calculate the size of the object */
+   padding: 0;
+   margin: 0; 
+
+}
+
+
+	/* now set the master styles for the whole window (screen)*/
+	body{
+		background-color: #FF8C42; /* sunny yellow */ 
+		line-height: 1.23em; /* each lone of text takes 20% more room than the base size */ 
+		font-family: Verdana, helvetica, san-serif;
+		font-size: 14px; /* size of the layout*/
+		font-weight: 500;
+		margin: 0; 
+		padding: 0;
+		min-height: 100vh; /* vertical height of the window*/
+		word-wrap: break-word!important; /* dont go outside the box */
+	}
+
+
+header{ 
+    background-color: #FF8C42; /*livid blue*/ 
+    min-height: 80px; 
+    padding: 0; 
+	  margin: 0; 
+	  position: relative; 
+
+}
+
+main{
+	background-color: #FF8C42; /*red*/
+	padding: 10px; 
+	margin: 0; 
+	min-height: 400px;
+
+}
+
+footer{
+   background-color: #6699CC; /*livid blue*/ 
+   min-height: 50px; 
+   padding: 10px; 
+   margin: 0; 
+}
+
+
+
+.grid1-main{
+     /* tells the browser to expect a grid */
+     display: grid;
+
+     
+     
+     /* sets up 2 columns first is two thirds of the container width,
+     second is one third. fr = fraction */
+     grid-template-columns: 2fr 1fr;
+
+     /* set ups the layout using named areas. these are then applied to the section.
+     each row below holds the name of the section that fills each column on each row */
+      grid-template-areas: 
+     "hero   hero"
+     "art1   art1"
+     "art2   aside"
+     "art3   aside"
+     "btm    btm";
+
+ }
+
+ .hero{
+ 	 grid-area: hero;
+ 	 background-color: #6699CC;
+ 	 min-height: 300px; 
+
+ }
+.art1{
+ 	 grid-area: art1;
+ 	 background-color: #6699CC;
+ 	 min-height: 150px;
+ }
+ .art2{
+ 	 grid-area: art2;
+ 	 background-color: #6699CC;
+ 	 min-height: 150px;
+ }
+ .art3{
+     grid-area: art3;
+ 	 background-color: #6699CC;
+ 	 min-height: 150px;
+ }
+ .aside1{
+        grid-area: aside;
+ 	    background-color: #6699CC;
+ 	    min-height: 150px;
+
+ }
+ .btmbanner{
+    grid-area: btm;
+ 	 background-color: #6699CC;
+ 	 min-height: 150px;
+ }
+
+ /* main navigation */
+
+ .navbar {
+     font-size: 1.2em; /* bigger text */
+     background-color: #6699CC;
+     border: 1px solid rgba(0, 0, 0, 0.4);
+     min-height: 50px
+     display: flex;
+     justify-content: space-between;
+     padding-bottom: 0;
+     align-items: center;
+     min-height: 80px;
+   }
+
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+     }
+
+.nav-links:link,
+.nav-links:visited{
+     text-decoration: none;
+     color: rgba(255, 255, 255, 0.7);
+     background-color: rgba(0,0,0,.2);
+     margin-left: 10px;
+     display: block;
+     padding: 20px;
+     border-radius: 5px;
+   }
+
+   .logo {
+      padding: 0;
+
+   }
+
+   .logo img{
+       height: 90px;
+       width: auto;
+   }
+
+   .nav-links:hover{
+       color: #6699CC;
+       background-color: #6699CC;
+  }
+
+  .nav-links.active {
+      color: #6699CC;
+      background-color: #6699CC;
+      cursor: default;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .ticket-link:link,
+    .ticket-link:visited {
+      color: #FF3C38;
+      background-color: #FF8C42;
+    }
+    .ticket-link:hover{
+      color: #FF3C38;
+      background-color: #FF8C42;
+    }
+
+    footer{
+      background-color: #FF8C42;
+      min-height: 50px;
+      padding: 10px;
+      margin: 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    
+
+    .ft{
+
+    }
+    .ft h3 {
+      font-size: 1.1rem;
+      border-bottom: 1px black solid;
+    }
+    .ft ul{
+      list-style: none;
+    }
+    .ft ul ul ul:link,
+    .ft ul ul a:visited{
+      text-decoration: none;
+      font-style: italic;
+      font-weight: 400;
+      color: #6699CC;
+      padding: 3px;
+      display: block;
+    }
+
+    .ft ul li a: hover{
+      color: #FF3C38;
+      background-color: #FF3C38;
+      padding: 10px;
+    }
+
+    .ft-terms, .ft-srch, .ft-social{
+      background-color: #FF3C38;
+      padding: 10px;
+    }
+
+    .ft terms p, .ftsrch form label1{
+      font-family: Raleway, san-serif;
+      font-size: .8rem; 
+    }
+
+
+
+
